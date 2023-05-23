@@ -99,3 +99,35 @@ class SqliteDatabase(Database):
             if task_id == item.id:
                 self.session.delete(item)
                 self.session.commit()
+
+class TestDatabase(Database):
+    def create_user(self, name: str, surname: str, email: str, password: str) -> None:
+        None
+        
+    def get_user_by_email(self, email):
+        return 
+    
+    
+    def create_detabase(self) -> None:
+        pass
+
+
+    def check_authentification(self, user: User, password: str) -> bool:
+        pass
+
+    def add_task(self, statement: str, deadline: datetime, user: User) -> None:
+        pass
+
+    def get_tasks(self, user: User) -> str:
+        pass
+
+    def update_task(self, task_id: int, user: User, text: str) -> None:
+        pass
+
+    def update_task_deadline(
+        self, task_id: int, user: DeclarativeMeta, deadline: datetime
+    ) -> None:
+        pass
+
+    def delete_task(self, task_id: int, user: DeclarativeMeta) -> None:
+        pass
